@@ -58,10 +58,11 @@ def get_suggestions(word, dictionary, max_distance=2, top_n=5):
 
 
 a=input("Enter the word: ")            #this is the input word from user.
-with open("words.txt", "r",encoding="utf-8") as file:
-    b=[line.strip().lower() for line in file if line.strip()]  #this is the list of words from dictionary.
- 
-suggestions = get_suggestions(a, b)
+def load_words(file_path):
+    with open(file_path, "r",encoding="utf-8") as file:
+        return [line.strip().lower() for line in file if line.strip()] #this is the list of words from the dictionary.
+
+suggestions = get_suggestions(a, load_words("words.txt"))
 print("Suggestions:")
 for word, distance in suggestions:
     print(word, distance)
