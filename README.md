@@ -70,7 +70,7 @@ load_words - Reads correct words from words.txt and stores them in a list.
 - Python
 - Streamlit
 - Dynamic Programming
-- Edit Distance / Levenshtein Distance
+- Edit Distance / Levenshtein Distancea
 
  ### Project structure
  ```

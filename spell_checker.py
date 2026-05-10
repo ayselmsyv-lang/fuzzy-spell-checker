@@ -57,20 +57,14 @@ def get_suggestions(word, dictionary, max_distance=2, top_n=5):
     return suggestions[:top_n]
 
 
-a=input("Enter the word: ")            #this is the input word from user.
+
 def load_words(file_path):
     with open(file_path, "r",encoding="utf-8") as file:
         return [line.strip().lower() for line in file if line.strip()] #this is the list of words from the dictionary.
+if __name__ == "__main__":
+    dictionary = load_words("words.txt")
+    word = input("Enter the word: ")
+    suggestions = get_suggestions(word, dictionary)
 
-suggestions = get_suggestions(a, load_words("words.txt"))
-print("Suggestions:")
-for word, distance in suggestions:
-    print(word, distance)
-
-#this will print the suggestions based on edit distance.
-if suggestions:
-    print(f"Best suggestion is: {suggestions[0][0]}")
-else:
-    print("No close suggestion found.")
-
-
+    for suggestion, distance in suggestions:
+        print(suggestion, distance)
