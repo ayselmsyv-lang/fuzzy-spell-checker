@@ -10,7 +10,10 @@ correction suggestions for each input word. Rank suggestions by edit
 distance and then alphabetically or by frequency.
 
 ## Okay let's talk about what my code does
+##  🚀 Live Demo
+You can open and test the deployed application here:
 
+🔗[Open Smart Fuzzy Spell Checker](https://fuzzy-spell-checker-k4nwbztkzqvgnkuv6wpne7.streamlit.app/) 
 # Smart Fuzzy Spell Checker
 
 This project is an interactive fuzzy spell checker built with Python and Streamlit.
